@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Chewy';
+  src: url('fonts/Chewy/Chewy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sniglet-Regular';
+  src: url('fonts/Sniglet/Sniglet-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sniglet-Bold';
+  src: url('fonts/Sniglet/Sniglet-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: hsla(94, 100%, 81%, 1);
+  background: linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
+  background: -moz-linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
+  background: -webkit-linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#c8ff9e", endColorstr="#6cc237", GradientType=1 );
+}
+
+#header-container {
+  position: relative;
+}
+
+#frogger-header {
+  color: #07660f;
+  font-family: 'Sniglet-Regular', sans-serif;
+  font-weight: 1000;
+  font-size: 8rem;
+  z-index: 10;
+  position: relative;
+}
+
+#frogger-icon {
+  position: absolute;
+  top: 30%;
+  right: -75px;
+  margin: 0;
+  width: 150px;
+  transform: rotate(20deg);
+}
+
+"C:\Users\tim\OneDrive\Dokumente\HTML-VSCode\Frogger Current"
+
+#username-text {
+  color: #07660f;
+  font-family: 'Sniglet-Bold', sans-serif;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  gap: 1.5rem;
+}
+
+#name-input {
+  padding: 8px;
+  padding-left: 1rem;
+  border-width: 0;
+  border-radius: 20px;
+  width: 12rem;
+  border-style: solid;
+  font-size: 1rem;
+  font-family: 'Sniglet-Regular', sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+#froggerCanvas {
+  margin-top: 0;
+}
+
+.canvas-container {
+  position: relative;
+  width: 600px;
+  height: 800px;
+}
+
+#highscore-list {
+  position: absolute;
+  top: 165px;
+  left: 80px;
+  font-size: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

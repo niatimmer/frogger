@@ -1,0 +1,36 @@
+Todo:
+
+Ziel des Spiels: Das höchste level zu erreichen (höherer highscore/highlevel)
+
+Besten "Versuche" wo man den besten score hatte mit Namen knopf o.ä.
+
+Für nächste Stunde: Highscorelist mit Button oder so anzeigen lassen
+Highscorelist mit Timestamp
+
+10 Auto texturen von denen eine gewählt wird anstelle der normalen blöckigen farben
+Dasselbe mit dem player
+
+Figuren auswählen und themes
+
+UI schöner gestalten
+
+
+Immer wenn neuer Boolean screen dann bei escape auf false hinzufügen und unten bei der crash function auch auf false setzen
+
+TODO von 19.03.26:
+startGame.js
+if username leer dann soll das game nicht starten, nur wennn man auch einen validen username angegeben hat im input
+
+TODO von 12.03.26:
+highscore.js
+bei jedem Spielbeginn nach namen fragen und später auch in der liste anzeigen
+cleancode
+
+TODO von 05.03.26:
+highscore.js
+aufzählungspunkte vor den highscores/times bei der liste wenn man h drückt loswerden
+bei createHighscoreList cleancode!
+
+TODO von 12.02.26:
+highscore.js
+In Liste (bei H press) das Time in kleiner schrift eine zeile unter den score/highscore tun, \n hat nicht funktioniert
