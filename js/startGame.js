@@ -13,6 +13,6 @@ function checkUsername() {
     if (username.length > 2 && username.length < 20) {
         startGame()
     } else {
-        document.getElementById("name-input").value = "Username must be 3-20 chars"
+        document.getElementById("error-message").style.opacity = "1"
     }
 }
