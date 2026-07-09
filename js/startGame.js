@@ -1,9 +1,18 @@
-document.getElementById("start-btn").addEventListener("click", startGame)
+document.getElementById("start-btn").addEventListener("click", checkUsername)
+
 function startGame() {
     const canvasDiv = document.getElementsByClassName("canvas-container")[0]
-    console.log(canvasDiv)
+    const inputContainer = document.getElementById("input-container")
     canvasDiv.style.display = "block"
-    const username = document.getElementById("name-input").value
-    console.log(username)
+    inputContainer.style.display = "none"
+    
 }
-console.log("tests")
+
+function checkUsername() {
+    const username = document.getElementById("name-input").value
+    if (username.length > 2 && username.length < 20) {
+        startGame()
+    } else {
+        document.getElementById("error-message").style.opacity = "1"
+    }
+}
