@@ -17,6 +17,17 @@ UI schöner gestalten
 
 Immer wenn neuer Boolean screen dann bei escape auf false hinzufügen und unten bei der crash function auch auf false setzen
 
+TODO von 02.07.26:
+Higher resolution frogger png ersetzen (in meinen downloads)
+Gucken warum wenn froger container kleiner wird nicht abstand zwischen container und bildschirm top und canvas kleiner wird
+startGame.js
+Der error sollte nur bei dem register auftauchen und nicht beim login weil bei login sollte man den namen schon gemacht haben
+Register Seite mit error message bei passwort und namen error (3-20 chars) und speichert passwort mit caesar cipher (für jetzt im localstorage)
+
+Vielleicht dass über dem bisherigen startbtn play as guest steht also wenn man den drückt spielt man als guest und es wird nichts gespiechter (mit datenbank dann wir guest im localstorage gespeichert)
+|-> Beim Login steht auch nicht mehr direkt der input sondern eben nur der register button darunter ein login button darunter play as ghuest mit dem play button, register erstellt acc, login logt sich von bestehendem account in
+
+
 TODO von 19.03.26:
 startGame.js
 if username leer dann soll das game nicht starten, nur wennn man auch einen validen username angegeben hat im input
