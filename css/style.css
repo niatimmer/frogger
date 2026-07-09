@@ -5,30 +5,47 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: start;
   margin: 0;
-  background: hsla(94, 100%, 81%, 1);
-  background: linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
-  background: -moz-linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
-  background: -webkit-linear-gradient(0deg, hsla(94, 100%, 81%, 1) 0%, hsla(97, 56%, 49%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#c8ff9e", endColorstr="#6cc237", GradientType=1 );
+  padding: 0;
+  background: #69BF4A;
+  background: linear-gradient(120deg, rgba(105, 191, 74, 1) 39%, rgba(150, 242, 153, 1) 100%);
 }
 
 #header-container {
   position: relative;
+  transition: all 200ms;
+}
+
+#header-container:hover {
+  transform: scale(1.01);
+  text-shadow: 5px 5px 20px #417e2a, -5px -5px 20px #639e66;
 }
 
 #frogger-header {
-  color: #07660f;
+  color: #124b17;
   font-family: 'Sniglet-Regular', sans-serif;
   font-weight: 1000;
   font-size: 8rem;
   z-index: 10;
   position: relative;
+  transition: all 0.35s ease-in-out;
 }
 
 #frogger-icon {
