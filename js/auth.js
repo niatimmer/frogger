@@ -7,10 +7,19 @@ document
   .getElementById("link-to-login")
   .addEventListener("click", displayLogin);
 
+const loginForm = document.getElementById("login-form")
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault()
+  console.log("Hello World!");
+  const formData = new FormData(loginForm)
+  console.log([...formData]);
+  if (!localStorage.getItem("userList")) console.log("Liste existiert nicht")
+  login(formData)
+})
+
 const registerForm = document.getElementById("register-form");
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("Hello World!");
   const formData = new FormData(registerForm);
   console.log([...formData]);
   if (!localStorage.getItem("userList")) initializeUserList();
@@ -76,5 +85,17 @@ function addUser(formData) {
     };
     userList.push(user);
     setUserList(userList);
+  }
+}
+
+function login(formData) {
+  const userList = getUserList()
+  const formInput = [...formData];
+
+  const username = formInput[0][1];
+  const password = formInput[1][1];
+
+  if (!usernameExists(username, userList)) {
+    console.log("Username doesnt exist!");
   }
 }
