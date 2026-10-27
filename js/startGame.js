@@ -1,14 +1,20 @@
-document.getElementById("start-btn").addEventListener("click", checkUsername)
+//document.getElementById("start-btn").addEventListener("click", checkUsername)
 
 function startGame() {
     const canvasDiv = document.getElementsByClassName("canvas-container")[0]
     const inputContainer = document.getElementById("input-container")
     const registerButton = document.getElementById("register-btn")
+    const loginButton = document.getElementById("login-btn")
     const headerContainer = document.getElementById("header-container")
+    const headerText = document.getElementById("frogger-header")
+    const headerFrog = document.getElementById("frogger-icon")
     canvasDiv.style.display = "block"
     inputContainer.style.display = "none"
     registerButton.style.display = "none"
-    headerContainer.style.scale = 0.5
+    loginButton.style.display = "none"
+    headerText.style.fontSize = "4rem"
+    headerFrog.style.width = "65px"
+    headerFrog.style.right = "-35px"
 }
 
 function checkUsername() {

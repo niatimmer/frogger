@@ -28,7 +28,7 @@ export function drawHighscoreScreenBackground() {
 
 export function setHighscoreList(highscoreObject) {
   const LIST_LENGTH = 7;
-  const scoreListStorage = localStorage.getItem("highScoreList");
+  const scoreListStorage = localStorage.getItem("highscoreList");
   if (scoreListStorage) {
     const parsedList = JSON.parse(scoreListStorage);
     parsedList.sort((a, b) => b.highscore - a.highscore);
@@ -53,7 +53,7 @@ export function setHighscoreList(highscoreObject) {
       console.log("New Entry:", newListEntry);
       parsedList.push(newListEntry);
       parsedList.sort((a, b) => b.highscore - a.highscore);
-      localStorage.setItem("highScoreList", JSON.stringify(parsedList));
+      localStorage.setItem("highscoreList", JSON.stringify(parsedList));
     } else if (
       highscoreObject.highscore > minimum.highscore &&
       stateOfGame.currentLevel > minimum.highscore &&
@@ -62,7 +62,7 @@ export function setHighscoreList(highscoreObject) {
       parsedList.pop();
       parsedList.push(highscoreObject);
       parsedList.sort((a, b) => b.highscore - a.highscore);
-      localStorage.setItem("highScoreList", JSON.stringify(parsedList));
+      localStorage.setItem("highscoreList", JSON.stringify(parsedList));
       console.log(parsedList);
     }
   } else {
@@ -72,7 +72,7 @@ export function setHighscoreList(highscoreObject) {
     };
     let firstEntryHighscoreList = [highscoreObject];
     localStorage.setItem(
-      "highScoreList",
+      "highscoreList",
       JSON.stringify(firstEntryHighscoreList),
     );
   }
@@ -83,24 +83,24 @@ export const setHighscore = () => {
     highscore: stateOfGame.currentLevel,
     time: new Date(),
   };
-  let highScoreStorage = JSON.parse(localStorage.getItem("highScore"));
+  let highScoreStorage = JSON.parse(localStorage.getItem("highscore"));
   if (highScoreStorage) {
     if (stateOfGame.currentLevel > highScoreStorage.highscore) {
       let updatedHighscoreObject = {
         highscore: stateOfGame.currentLevel,
         time: new Date(),
       };
-      localStorage.setItem("highScore", JSON.stringify(updatedHighscoreObject));
+      localStorage.setItem("highscore", JSON.stringify(updatedHighscoreObject));
     }
-  } else localStorage.setItem("highScore", JSON.stringify(highscoreObject));
-  const updatedHighscoreStorage = JSON.parse(localStorage.getItem("highScore"));
+  } else localStorage.setItem("highscore", JSON.stringify(highscoreObject));
+  const updatedHighscoreStorage = JSON.parse(localStorage.getItem("highscore"));
   console.log(updatedHighscoreStorage);
   setHighscoreList(updatedHighscoreStorage);
   return updatedHighscoreStorage;
 };
 
 function getHighscore() {
-  return JSON.parse(localStorage.getItem("highScore"));
+  return JSON.parse(localStorage.getItem("highscore"));
 }
 
 export function displayHighscore() {
@@ -114,12 +114,12 @@ export function displayHighscoreInCrash() {
   const highscore = getHighscore() ? getHighscore().highscore : 1;
   ctx.font = " 45px Arial";
   ctx.fillStyle = "#e74c3c";
-  ctx.fillText("HighScore: " + highscore, halfCanvasWidth - 140, 680);
+  ctx.fillText("Highscore: " + highscore, halfCanvasWidth - 140, 680);
 }
 
 export function createHighscoreList() {
-  let highScoreListStorage = localStorage.getItem("highScoreList");
-  const parsedList = JSON.parse(highScoreListStorage);
+  let highscoreListStorage = localStorage.getItem("highscoreList");
+  const parsedList = JSON.parse(highscoreListStorage);
   const list = document.getElementById("highscore-list");
   parsedList.forEach((element, index) => {
     const date = new Date(element.time);
@@ -150,10 +150,10 @@ export function removeElements() {
 }
 
 export function toggleHighscoreList() {
-  const highScoreListOL = document.getElementById("highscore-list");
+  const highscoreListOL = document.getElementById("highscore-list");
   if (stateOfGame.isHighscoreScreen) {
-    highScoreListOL.style.display = "block";
+    highscoreListOL.style.display = "block";
   } else {
-    highScoreListOL.style.display = "none";
+    highscoreListOL.style.display = "none";
   }
 }

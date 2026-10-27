@@ -12,20 +12,26 @@
   font-style: normal;
 }
 
-html {
+* {
   margin: 0;
   padding: 0;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  margin: 0;
-  padding: 0;
-  background: #69BF4A;
+  justify-content: center;
   background: linear-gradient(120deg, rgba(105, 191, 74, 1) 39%, rgba(150, 242, 153, 1) 100%);
+}
+
+h1 {
+  cursor: default;
 }
 
 #header-container {
@@ -33,9 +39,8 @@ body {
   transition: all 200ms;
 }
 
-#header-container:hover {
-  transform: scale(1.01);
-  text-shadow: 5px 5px 20px #417e2a, -5px -5px 20px #639e66;
+#frogger-header:hover + #frogger-icon {
+  transform: scale(1.1) rotate(15deg);
 }
 
 #frogger-header {
@@ -46,15 +51,21 @@ body {
   z-index: 10;
   position: relative;
   transition: all 0.35s ease-in-out;
+  padding-bottom: 4rem;
 }
 
 #frogger-icon {
   position: absolute;
-  top: 30%;
+  top: 12%;
   right: -75px;
   margin: 0;
   width: 150px;
   transform: rotate(20deg);
+  transition: transform 0.3s ease;
+}
+
+#frogger-icon:hover {
+  transform: scale(1.1) rotate(15deg);
 }
 
 #froggerCanvas {

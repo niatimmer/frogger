@@ -17,6 +17,21 @@ UI schöner gestalten
 
 Immer wenn neuer Boolean screen dann bei escape auf false hinzufügen und unten bei der crash function auch auf false setzen
 
+TODO von 15.10.26:
+Checken dass es einen username nicht zwei mal geben kann + andere username / passwort regeln (z.b. sonderzeichen, 40 char. username)
+
+TODO von 8.10.26:
+Gucken welche funktion wir benutzen können um die höchste ID zu finden, danach mit getId weitermachen
+
+TODO von 1.10.26:
+Bei auth.js weitermachen -> Gucken wie können wir noch geschickter auf den username und passwort zugreifen
+
+TODO von 17.09.26:
+Weiter bei den login / register forms arbieten (bei register muss man das passwort 2 mal eingeben und bei register steht drunter already have account, login)
+
+TODO von 09.07.26:
+Nur Frossch soll größer werden wenn man über sowohl frosch als auch text hovert
+
 TODO von 02.07.26:
 Higher resolution frogger png ersetzen (in meinen downloads)
 Gucken warum wenn froger container kleiner wird nicht abstand zwischen container und bildschirm top und canvas kleiner wird
