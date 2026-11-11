@@ -89,13 +89,19 @@ function addUser(formData) {
 }
 
 function login(formData) {
+  console.log("login")
   const userList = getUserList()
   const formInput = [...formData];
 
-  const username = formInput[0][1];
-  const password = formInput[1][1];
+  const inputUsername = formInput[0][1];
+  const inputPassword = formInput[1][1];
 
-  if (!usernameExists(username, userList)) {
+  if (!usernameExists(inputUsername, userList)) {
     console.log("Username doesnt exist!");
   }
+
+  const user = userList.find(({ username }) => username === inputUsername)
+  if (user.password === inputPassword) {console.log("Logged in!")}
+
+  console.log(user, inputUsername, inputPassword)
 }
