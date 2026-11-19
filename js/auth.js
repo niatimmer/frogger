@@ -7,6 +7,8 @@ document
   .getElementById("link-to-login")
   .addEventListener("click", displayLogin);
 
+
+
 const loginForm = document.getElementById("login-form")
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault()
@@ -45,7 +47,7 @@ function getUserList() {
   if (storedList) {
     const parsedList = JSON.parse(storedList);
     return parsedList;
-  } else return "Keine Liste vorhanden";
+  } else return "Keine Liste vorhanden!";
 }
 
 function setUserList(userList) {
@@ -59,6 +61,7 @@ function initializeUserList() {
 
 function getId() {
   const userList = getUserList();
+  if (userList.length === 0) {return 1}
   const maxId = Math.max(...userList.map((user) => user.id));
   return maxId + 1;
 }
