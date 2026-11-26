@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -66,6 +67,15 @@ h1 {
 
 #frogger-icon:hover {
   transform: scale(1.1) rotate(15deg);
+}
+
+#username-display {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  color: #124b17;
 }
 
 #froggerCanvas {

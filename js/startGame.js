@@ -1,20 +1,20 @@
 //document.getElementById("start-btn").addEventListener("click", checkUsername)
 
-function startGame() {
+export function startGame(user) {
     const canvasDiv = document.getElementsByClassName("canvas-container")[0]
-    const inputContainer = document.getElementById("input-container")
-    const registerButton = document.getElementById("register-btn")
-    const loginButton = document.getElementById("login-btn")
+    const loginForm = document.getElementById("login-form")
+    const registerForm = document.getElementById("register-form")
     const headerContainer = document.getElementById("header-container")
     const headerText = document.getElementById("frogger-header")
     const headerFrog = document.getElementById("frogger-icon")
+    const usernameDisplay = document.getElementById("username-display")
     canvasDiv.style.display = "block"
-    inputContainer.style.display = "none"
-    registerButton.style.display = "none"
-    loginButton.style.display = "none"
+    loginForm.style.display = "none"
+    registerForm.style.display = "none"
     headerText.style.fontSize = "4rem"
     headerFrog.style.width = "65px"
     headerFrog.style.right = "-35px"
+    usernameDisplay.innerHTML = user.username
 }
 
 function checkUsername() {
@@ -31,3 +31,4 @@ function checkUsername() {
         document.getElementById("error-message").style.opacity = "1"
     }
 }
+

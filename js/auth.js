@@ -1,3 +1,5 @@
+import { startGame } from "./startGame.js";
+
 document
   .getElementById("register-btn")
   .addEventListener("click", displayRegister);
@@ -79,6 +81,7 @@ function addUser(formData) {
 
   if (usernameExists(username, userList)) {
     console.log("Username already exists!");
+    return
   } else {
     const id = getId();
     const user = {
@@ -88,6 +91,7 @@ function addUser(formData) {
     };
     userList.push(user);
     setUserList(userList);
+    startGame(user)
   }
 }
 
@@ -104,7 +108,10 @@ function login(formData) {
   }
 
   const user = userList.find(({ username }) => username === inputUsername)
-  if (user.password === inputPassword) {console.log("Logged in!")}
+  if (user.password === inputPassword) {
+    console.log("Logged in!")
+    startGame(user)
+  }
 
   console.log(user, inputUsername, inputPassword)
 }
