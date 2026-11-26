@@ -9,17 +9,15 @@ document
   .getElementById("link-to-login")
   .addEventListener("click", displayLogin);
 
-
-
-const loginForm = document.getElementById("login-form")
+const loginForm = document.getElementById("login-form");
 loginForm.addEventListener("submit", (event) => {
-  event.preventDefault()
+  event.preventDefault();
   console.log("Hello World!");
-  const formData = new FormData(loginForm)
+  const formData = new FormData(loginForm);
   console.log([...formData]);
-  if (!localStorage.getItem("userList")) console.log("Liste existiert nicht")
-  login(formData)
-})
+  if (!localStorage.getItem("userList")) console.log("Liste existiert nicht");
+  login(formData);
+});
 
 const registerForm = document.getElementById("register-form");
 registerForm.addEventListener("submit", (event) => {
@@ -63,7 +61,9 @@ function initializeUserList() {
 
 function getId() {
   const userList = getUserList();
-  if (userList.length === 0) {return 1}
+  if (userList.length === 0) {
+    return 1;
+  }
   const maxId = Math.max(...userList.map((user) => user.id));
   return maxId + 1;
 }
@@ -81,23 +81,24 @@ function addUser(formData) {
 
   if (usernameExists(username, userList)) {
     console.log("Username already exists!");
-    return
+    return;
   } else {
     const id = getId();
     const user = {
       id: id,
       username: username,
       password: password,
+      highscoreList: [],
     };
     userList.push(user);
     setUserList(userList);
-    startGame(user)
+    startGame(user);
   }
 }
 
 function login(formData) {
-  console.log("login")
-  const userList = getUserList()
+  console.log("login");
+  const userList = getUserList();
   const formInput = [...formData];
 
   const inputUsername = formInput[0][1];
@@ -107,11 +108,11 @@ function login(formData) {
     console.log("Username doesnt exist!");
   }
 
-  const user = userList.find(({ username }) => username === inputUsername)
+  const user = userList.find(({ username }) => username === inputUsername);
   if (user.password === inputPassword) {
-    console.log("Logged in!")
-    startGame(user)
+    console.log("Logged in!");
+    startGame(user);
   }
 
-  console.log(user, inputUsername, inputPassword)
+  console.log(user, inputUsername, inputPassword);
 }
